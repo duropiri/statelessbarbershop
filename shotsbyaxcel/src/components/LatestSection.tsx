@@ -18,6 +18,8 @@ interface Project {
 
 export default function LatestSection({ className, projects }: ComponentProps) {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -54,7 +56,9 @@ export default function LatestSection({ className, projects }: ComponentProps) {
   };
 
   return (
-    <section className={`${className} relative flex flex-col items-start justify-start w-full h-full bg-white`}>
+    <section
+      className={`${className} relative flex flex-col items-start justify-start w-full h-full bg-white`}
+    >
       {/* Header */}
       <header className="flex flex-col items-start justify-start w-full h-full p-4 sm:p-10 font-medium sm:font-semibold">
         <div className="flex flex-row items-start justify-between w-full uppercase small-text mb-6 sm:mb-[4vw]">
@@ -97,14 +101,14 @@ export default function LatestSection({ className, projects }: ComponentProps) {
         className="flex flex-row flex-wrap items-start justify-between w-full h-full gap-y-[10vw] sm:gap-y-[5vw]"
       >
         {projects.map((project, index) => {
-          const x = useMotionValue(0);
-          const y = useMotionValue(0);
           return (
             <li
               key={"project-" + index}
               className={`flex-grow h-full overflow-hidden`}
               style={{
-                width: isSmallScreen ? "100%" : `${100 / getWidthClass(index)}%`,
+                width: isSmallScreen
+                  ? "100%"
+                  : `${100 / getWidthClass(index)}%`,
               }}
             >
               <a
