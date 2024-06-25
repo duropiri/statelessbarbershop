@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.small-text {
+  font-size: 3vw;
+}
+
+.medium-text {
+  font-size: 5vw;
+}
+
+.large-text {
+  font-size: 12vw;
+}
+
+@media (min-width: 768px) {
+  .small-text {
+    font-size: 1vw;
+  }
+
+  .medium-text {
+    font-size: 3vw;
+  }
+
+  .large-text {
+    font-size: 10vw;
+  }
+}
+
+@media (min-width: 640px) {
+}
+
+.inner {
+  background-color: green;
+  .page {
+    background-color: blue;
+  }
+  .slide {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: red;
+    z-index: 1;
+  }
+}
+
+.curve{
+    .background{
+        position: fixed;
+        height: calc(100vh + 600px);
+        width: 100vw;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+    }
+    .background{
+        background-color: black;
+        transition: opacity 0s linear 0.1s;
+    }
+    .route{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        color: white;
+        font-size: 46px;
+        z-index: 3;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
