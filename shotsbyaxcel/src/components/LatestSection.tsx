@@ -72,7 +72,6 @@ export default function LatestSection({ className, projects }: ComponentProps) {
             >
               Latest
             </CharByCharOnScroll>
-            {/* <div className="text-[250px]">Latest</div> */}
             <div className="z-10 medium-text lg:-translate-y-[1vw]">
               [{projects.length.toFixed(1)}]
             </div>
@@ -97,72 +96,76 @@ export default function LatestSection({ className, projects }: ComponentProps) {
         ref={ref}
         className="flex flex-row flex-wrap items-start justify-between w-full h-full gap-y-[10vw] sm:gap-y-[5vw]"
       >
-        {projects.map((project, index) => (
-          <li
-            key={"project-" + index}
-            className={`flex-grow h-full overflow-hidden`}
-            style={{
-              width: isSmallScreen ? "100%" : `${100 / getWidthClass(index)}%`,
-            }}
-          >
-            <a
-              className="flex flex-col w-full h-full"
-              href="#"
-              aria-label="View project"
+        {projects.map((project, index) => {
+          const x = useMotionValue(0);
+          const y = useMotionValue(0);
+          return (
+            <li
+              key={"project-" + index}
+              className={`flex-grow h-full overflow-hidden`}
+              style={{
+                width: isSmallScreen ? "100%" : `${100 / getWidthClass(index)}%`,
+              }}
             >
-              <div className="flex flex-row items-start justify-between w-full uppercase small-text font-regular mb-6 px-4 sm:px-8 gap-x-5">
-                <div className="flex flex-col items-start justify-between">
-                  <div className="truncate max-w-[20ch]">{project.name}</div>
-                  <div className="font-extrabold truncate max-w-[20ch]">
-                    {project.brand}
+              <a
+                className="flex flex-col w-full h-full"
+                href="#"
+                aria-label="View project"
+              >
+                <div className="flex flex-row items-start justify-between w-full uppercase small-text font-regular mb-6 px-4 sm:px-8 gap-x-5">
+                  <div className="flex flex-col items-start justify-between">
+                    <div className="truncate max-w-[20ch]">{project.name}</div>
+                    <div className="font-extrabold truncate max-w-[20ch]">
+                      {project.brand}
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-end justify-between">
+                    <div>{project.type}</div>
+                    <div>{project.duration}</div>
                   </div>
                 </div>
-                <div className="flex flex-col items-end justify-between">
-                  <div>{project.type}</div>
-                  <div>{project.duration}</div>
+                <div
+                  className="relative aspect-video followerchangetest overflow-hidden"
+                  data-follower-text="[WATCH]"
+                >
+                  <motion.video
+                    src={project.src}
+                    autoPlay={false}
+                    loop
+                    muted // Ensure video element starts muted
+                    className=""
+                    onMouseOver={(e) => {
+                      e.currentTarget.currentTime = 0; // Reset to the beginning
+                      e.currentTarget.play();
+                      e.currentTarget.style.transform = `scale(1.15)`;
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.pause();
+                      e.currentTarget.currentTime = 0; // Reset to the beginning
+                      e.currentTarget.style.transform = `translate(0px, 0px) scale(1.25)`; // Reset position and scale on mouse out
+                    }}
+                    style={{
+                      x: x,
+                      y: y,
+                      objectFit: "cover",
+                      transform: "scale(1.25)", // Initial scale to avoid gaps
+                    }}
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const mouseX = e.clientX - rect.left; // x position within the element
+                      const mouseY = e.clientY - rect.top; // y position within the element
+
+                      const offsetX = -(mouseX - rect.width / 2) / 10; // Adjust the divisor to control the amount of shift
+                      const offsetY = -(mouseY - rect.height / 2) / 10;
+
+                      e.currentTarget.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(1.15)`; // Apply both translate and scale
+                    }}
+                  />
                 </div>
-              </div>
-              <div
-                className="relative aspect-video followerchangetest overflow-hidden"
-                data-follower-text="[WATCH]"
-              >
-                <motion.video
-                  src={project.src}
-                  autoPlay={false}
-                  loop
-                  muted // Ensure video element starts muted
-                  className=""
-                  onMouseOver={(e) => {
-                    e.currentTarget.currentTime = 0; // Reset to the beginning
-                    e.currentTarget.play();
-                    e.currentTarget.style.transform = `scale(1.15)`;
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.pause();
-                    e.currentTarget.currentTime = 0; // Reset to the beginning
-                    e.currentTarget.style.transform = `translate(0px, 0px) scale(1.25)`; // Reset position and scale on mouse out
-                  }}
-                  style={{
-                    x: useMotionValue(0),
-                    y: useMotionValue(0),
-                    objectFit: "cover",
-                    transform: "scale(1.25)", // Initial scale to avoid gaps
-                  }}
-                  onMouseMove={(e) => {
-                    const rect = e.currentTarget.getBoundingClientRect();
-                    const x = e.clientX - rect.left; // x position within the element
-                    const y = e.clientY - rect.top; // y position within the element
-
-                    const offsetX = -(x - rect.width / 2) / 10; // Adjust the divisor to control the amount of shift
-                    const offsetY = -(y - rect.height / 2) / 10;
-
-                    e.currentTarget.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(1.15)`; // Apply both translate and scale
-                  }}
-                />
-              </div>
-            </a>
-          </li>
-        ))}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
