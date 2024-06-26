@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface ComponentProps {
+  className?: string;
   videos?: Video[];
 }
 
@@ -19,7 +20,7 @@ export const Videos = [
   { title: "Kidjvck x Axcel", src: "https://shotsbyaxcel.s3.us-east-2.amazonaws.com/video5.mp4" },
 ];
 
-export default function Body({ videos = Videos }: ComponentProps) {
+export default function Body({ className ,videos = Videos }: ComponentProps) {
   const videoRef = useRef<HTMLVideoElement>(null); // Reference to the main video element
   const secondaryVideoRef = useRef<HTMLVideoElement>(null); // Reference to the secondary video element
   const audioCtxRef = useRef<AudioContext | null>(null); // Reference to the AudioContext
@@ -196,8 +197,9 @@ export default function Body({ videos = Videos }: ComponentProps) {
 
     loadGSAP();
   }, []);
+
   return (
-    <section className="relative flex flex-col items-center justify-center h-[100vh] overflow-hidden bg-black">
+    <section className={`${className} relative flex flex-col items-center justify-center w-[100vw] h-[100vh] overflow-hidden bg-black`}>
       <div className="absolute flex flex-col items-start justify-center text-white left-0 bottom-1/2  text-2xl large-text font-black ml-4 sm:ml-10 mix-blend-difference uppercase max-w-[10ch] z-10 leading-none">
         404
         <a
@@ -207,7 +209,7 @@ export default function Body({ videos = Videos }: ComponentProps) {
         >
           <div className="flex flex-row w-full h-full items-start">
             <svg
-              className="rotate-90 w-6 group-hover:-rotate-0 duration-300"
+              className="rotate-90 w-2 sm:w-4 group-hover:-rotate-0 duration-300"
               fill="none"
               viewBox="0 0 9 14"
               xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +271,6 @@ export default function Body({ videos = Videos }: ComponentProps) {
           </p>
         </div>
       </button>
-
       <button
         onClick={handleMuteToggle}
         className="absolute mr-4 right-0 bottom-1/2 sm:translate-y-0 sm:mr-0 sm:right-auto sm:bottom-0 flex items-center justify-center rounded-full mix-blend-difference mb-3 sm:mb-6"
