@@ -108,7 +108,7 @@ export default function LatestSection({ className, projects }: ComponentProps) {
               style={{
                 width: isSmallScreen
                   ? "100%"
-                  : `${100 / getWidthClass(index)}%`,
+                  : `${100 / getWidthClass(index+5)}%`,
               }}
             >
               <a
