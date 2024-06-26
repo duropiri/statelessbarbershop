@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import CharByCharOnScroll from "./animations/CharByCharOnScroll";
 
 interface ComponentProps {
   className?: string;
@@ -34,7 +33,9 @@ const CurrentTime = () => {
 
 export default function Footer({ className }: ComponentProps) {
   return (
-    <footer className={`${className} relative flex flex-col items-start justify-between w-full bg-white overflow-hidden`}>
+    <footer
+      className={`${className} relative flex flex-col items-start justify-between w-full bg-white overflow-hidden`}
+    >
       {/* Header */}
       <header className="flex flex-col items-start justify-start w-full pt-4 sm:pt-10 px-4 sm:px-10 font-medium sm:font-medium z-20 text-white mix-blend-difference">
         {/* <div className="flex flex-row items-start justify-between w-full uppercase small-text mb-6 sm:mb-[4vw] z-10">
@@ -51,7 +52,7 @@ export default function Footer({ className }: ComponentProps) {
         <ul className="grid grid-cols-2 gap-y-[15vw] md:grid-cols-4 items start justify-between w-full h-full uppercase font-medium small-text">
           {/* Site credits */}
           <li className="flex flex-col items-start justify-between w-full h-auto gap-y-[5vw] sm:gap-y-[1vw]">
-            <div>Stateless. ©2024</div>
+            <div>Stateless . ©2024</div>
 
             <div className="relative flex flex-col gap-y-[5vw] sm:gap-y-0">
               <span>Site By</span>
@@ -80,7 +81,7 @@ export default function Footer({ className }: ComponentProps) {
         YYC/YXE 🔜 SYD
        </a> */}
               <span className="flex items-end justify-end md:justify-start w-full">
-                YYC/YXE 🔜 SYD
+                📍 Caracasbaai weg 197 E
               </span>
             </div>
           </li>
@@ -90,12 +91,12 @@ export default function Footer({ className }: ComponentProps) {
 
             <div className="relative flex flex-col gap-y-[5vw] sm:gap-y-0">
               <a
-                href="mailto:Stateless@gmail.com"
+                href="mailto:info@relaydigital.agency"
                 className="bottom-0 flex flex-row items-center group hover:font-bold duration-100 small-text"
                 aria-label="Email Stateless"
               >
                 <div className="hidden md:block absolute w-[1.5vw] h-[1.5vw] md:w-[0.5vw] md:h-[0.5vw] bg-white -ml-4 duration-100 transform scale-x-0 group-hover:scale-x-100 origin-right"></div>
-                Stateless@gmail.com
+                Statelessbarbershop@gmail.com
               </a>
 
               {/* Social Media SVGs */}
@@ -105,7 +106,7 @@ export default function Footer({ className }: ComponentProps) {
                   <li>
                     <a
                       className="followerchangetest"
-                      href="https://www.linkedin.com/in/Stateless--265a28171/"
+                      href="/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit LinkedIn"
@@ -131,7 +132,7 @@ export default function Footer({ className }: ComponentProps) {
                   <li>
                     <a
                       className="followerchangetest"
-                      href="https://www.facebook.com/prince.s./"
+                      href="/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit Facebook"
@@ -155,7 +156,7 @@ export default function Footer({ className }: ComponentProps) {
                   <li>
                     <a
                       className="followerchangetest"
-                      href="https://www.instagram.com/shotsbyStateless/"
+                      href="https://www.instagram.com/stateless_barbershop/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit Instagram"

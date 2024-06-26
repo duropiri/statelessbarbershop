@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import CharByCharOnScroll from "./animations/CharByCharOnScroll";
-import { FlipLink } from "./animations/RevealLinks";
+import CharByCharOnScroll from "@/components/animations/CharByCharOnScroll";
+import { FlipLink } from "@/components/animations/RevealLinks";
 
 interface ComponentProps {
   className?: string;
@@ -71,15 +71,13 @@ export default function AboutSection({ className }: ComponentProps) {
           <div className="flex flex-col items-center sm:items-start small-text text-center sm:text-start">
             <h1 className="mb-[4vw] sm:mb-[1vw]">[Stateless]</h1>
             <div className="sm:max-w-[40ch]">
-              Creative Leader | Conceptual Marketer | Photographer |
-              Videographer
+              Stateless Barbershop & Education🇨🇼
             </div>
           </div>
           <div className="hidden sm:flex flex-col items-center sm:items-end small-text text-center sm:text-end">
             <h1 className="mb-[4vw] sm:mb-[1vw]">[Stateless]</h1>
             <div className="sm:max-w-[40ch]">
-              Creative Leader | Conceptual Marketer | Photographer |
-              Videographer
+              Stateless Barbershop & Education🇨🇼
             </div>
           </div>
         </div>
