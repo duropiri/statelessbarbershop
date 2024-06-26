@@ -51,7 +51,7 @@ export default function Footer({ className }: ComponentProps) {
         <ul className="grid grid-cols-2 gap-y-[15vw] md:grid-cols-4 items start justify-between w-full h-full uppercase font-medium small-text">
           {/* Site credits */}
           <li className="flex flex-col items-start justify-between w-full h-auto gap-y-[5vw] sm:gap-y-[1vw]">
-            <div>Axcel Raul. ©2024</div>
+            <div>Stateless. ©2024</div>
 
             <div className="relative flex flex-col gap-y-[5vw] sm:gap-y-0">
               <span>Site By</span>
@@ -90,12 +90,12 @@ export default function Footer({ className }: ComponentProps) {
 
             <div className="relative flex flex-col gap-y-[5vw] sm:gap-y-0">
               <a
-                href="mailto:axcelraul@gmail.com"
+                href="mailto:Statelessraul@gmail.com"
                 className="bottom-0 flex flex-row items-center group hover:font-bold duration-100 small-text"
-                aria-label="Email Axcel"
+                aria-label="Email Stateless"
               >
                 <div className="hidden md:block absolute w-[1.5vw] h-[1.5vw] md:w-[0.5vw] md:h-[0.5vw] bg-white -ml-4 duration-100 transform scale-x-0 group-hover:scale-x-100 origin-right"></div>
-                Axcelraul@gamil.com
+                Statelessraul@gamil.com
               </a>
 
               {/* Social Media SVGs */}
@@ -105,7 +105,7 @@ export default function Footer({ className }: ComponentProps) {
                   <li>
                     <a
                       className="followerchangetest"
-                      href="https://www.linkedin.com/in/axcel-raul-265a28171/"
+                      href="https://www.linkedin.com/in/Stateless-raul-265a28171/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit LinkedIn"
@@ -155,7 +155,7 @@ export default function Footer({ className }: ComponentProps) {
                   <li>
                     <a
                       className="followerchangetest"
-                      href="https://www.instagram.com/shotsbyaxcel/"
+                      href="https://www.instagram.com/shotsbyStateless/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit Instagram"

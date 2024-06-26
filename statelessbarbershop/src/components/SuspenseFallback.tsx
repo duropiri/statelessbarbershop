@@ -99,7 +99,7 @@ const SuspenseFallback: React.FC<SuspenseFallbackProps> = ({
         transition={{ duration: 0.8, ease: "easeInOut" }}
       >
         <div className="relative text-6xl sm:text-9xl uppercase font-extrabold text-white mix-blend-difference">
-          Axcel
+          Stateless
           <span className="text-sm sm:text-2xl">Raul</span>
           <span className="text-lg sm:text-3xl font-light">®</span>
         </div>

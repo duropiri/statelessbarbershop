@@ -223,7 +223,7 @@ const Header: React.FC<HeaderProps> = ({ navigation }) => {
       >
         <div className="relative flex justify-between text-xs uppercase font-bold">
           <div className="relative text-6xl uppercase font-extrabold">
-            Axcel
+            Stateless
             <AnimatePresence>
               <span className="text-sm">{getChars("Raul")}</span>
 

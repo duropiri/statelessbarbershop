@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Axcel Raul | @shotsbyaxcel",
+  title: "Stateless | @shotsbyStateless",
   description: "Photography | Videography",
 };
 

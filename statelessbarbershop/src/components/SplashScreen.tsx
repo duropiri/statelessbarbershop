@@ -57,7 +57,7 @@ export default function SplashScreen({
       {/* The logo, centered */}
       <div className="z-10 select-none pointer-events-none flex flex-col">
         <div className="relative text-9xl uppercase font-extrabold text-white mix-blend-difference">
-          Axcel
+          Stateless
           <AnimatePresence>
             <span className="text-2xl">{getChars("Raul")}</span>
             <span className="text-3xl font-light">{getChars("®")}</span>

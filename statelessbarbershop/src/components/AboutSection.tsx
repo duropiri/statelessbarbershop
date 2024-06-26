@@ -62,21 +62,21 @@ export default function AboutSection({ className }: ComponentProps) {
               inside="30"
               className="flex flex-col items-center justify-center bg-black px-4 py-2 rounded-full overflow-hidden small-text text-white h-full uppercase"
             >
-              More About Axcel
+              More About Stateless
             </FlipLink>
           </a>
         </div>
 
         <div className="sm:absolute top-1/2 flex flex-col items-center justify-between w-full gap-y-10 sm:flex-row sm:px-10 sm:-mx-10 text-white mix-blend-difference font-medium sm:font-medium mb-6 sm:mb-[4vw] z-10">
           <div className="flex flex-col items-center sm:items-start small-text text-center sm:text-start">
-            <h1 className="mb-[4vw] sm:mb-[1vw]">[Axcel Raul]</h1>
+            <h1 className="mb-[4vw] sm:mb-[1vw]">[Stateless]</h1>
             <div className="sm:max-w-[40ch]">
               Creative Leader | Conceptual Marketer | Photographer |
               Videographer
             </div>
           </div>
           <div className="hidden sm:flex flex-col items-center sm:items-end small-text text-center sm:text-end">
-            <h1 className="mb-[4vw] sm:mb-[1vw]">[Axcel Raul]</h1>
+            <h1 className="mb-[4vw] sm:mb-[1vw]">[Stateless]</h1>
             <div className="sm:max-w-[40ch]">
               Creative Leader | Conceptual Marketer | Photographer |
               Videographer
@@ -90,7 +90,7 @@ export default function AboutSection({ className }: ComponentProps) {
             inside="30"
             className="flex flex-col items-center justify-center bg-black px-4 py-2 rounded-full overflow-hidden small-text text-white h-full uppercase"
           >
-            More About Axcel
+            More About Stateless
           </FlipLink>
         </div>
       </div>

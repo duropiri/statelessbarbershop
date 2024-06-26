@@ -3,7 +3,7 @@ import Body from "@/components/pages/About";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Axcel Raul | @shotsbyaxcel",
+  title: "About | Stateless | @shotsbyStateless",
   description: "Photography | Videography",
 };
 
