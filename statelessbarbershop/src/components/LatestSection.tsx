@@ -129,7 +129,7 @@ export default function LatestSection({ className, projects }: ComponentProps) {
                   </div>
                 </div>
                 <div
-                  className="relative aspect-video followerchangetest overflow-hidden"
+                  className="relative aspect-[9/16] followerchangetest overflow-hidden"
                   data-follower-text="[WATCH]"
                 >
                   <motion.video
