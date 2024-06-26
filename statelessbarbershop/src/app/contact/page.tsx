@@ -3,8 +3,8 @@ import Body from "@/components/pages/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Stateless | @shotsbyStateless",
-  description: "Photography | Videography",
+  title: "Contact | Stateless | @stateless_barbershop",
+  description: "Stateless Barbershop & Education🇨🇼",
 };
 
 export default function Home() {

@@ -4,8 +4,8 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Work | Stateless | @shotsbyStateless",
-  description: "Photography | Videography",
+  title: "Work | Stateless | @stateless_barbershop",
+  description: "Stateless Barbershop & Education🇨🇼",
 };
 
 export default function Home() {
