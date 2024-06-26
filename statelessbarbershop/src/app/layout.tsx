@@ -24,7 +24,7 @@ export default function RootLayout({
           <CustomCursor />
         </div>
         <SplashScreenProvider>
-          <Header navigation={NavLinks} />
+          {/* <Header navigation={NavLinks} /> */}
           <SmoothScrolling>
             <PageAnimatePresence>{children}</PageAnimatePresence>
           </SmoothScrolling>

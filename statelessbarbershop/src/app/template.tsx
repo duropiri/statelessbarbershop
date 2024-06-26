@@ -94,7 +94,7 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
             duration: 0.2,
           }}
         >
-          {/* <Header navigation={NavLinks} /> */}
+          <Header navigation={NavLinks} />
           {children}
           <Footer className="z-10" />
         </motion.div>
