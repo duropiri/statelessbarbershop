@@ -225,7 +225,7 @@ const Header: React.FC<HeaderProps> = ({ navigation }) => {
           <div className="relative text-6xl uppercase font-extrabold">
             Stateless
             <AnimatePresence>
-              <span className="text-sm">{getChars("Raul")}</span>
+              <span className="text-sm">{getChars("")}</span>
 
               <span className="absolute text-lg -bottom-[3px] font-light">
                 {getChars("®")}

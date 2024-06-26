@@ -100,7 +100,7 @@ const SuspenseFallback: React.FC<SuspenseFallbackProps> = ({
       >
         <div className="relative text-6xl sm:text-9xl uppercase font-extrabold text-white mix-blend-difference">
           Stateless
-          <span className="text-sm sm:text-2xl">Raul</span>
+          <span className="text-sm sm:text-2xl"></span>
           <span className="text-lg sm:text-3xl font-light">®</span>
         </div>
         <div className="flex flex-row w-full items-center justify-between text-white text-lg mix-blend-difference uppercase">

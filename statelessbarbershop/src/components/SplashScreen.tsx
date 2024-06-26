@@ -59,7 +59,7 @@ export default function SplashScreen({
         <div className="relative text-9xl uppercase font-extrabold text-white mix-blend-difference">
           Stateless
           <AnimatePresence>
-            <span className="text-2xl">{getChars("Raul")}</span>
+            <span className="text-2xl">{getChars("")}</span>
             <span className="text-3xl font-light">{getChars("®")}</span>
           </AnimatePresence>
         </div>

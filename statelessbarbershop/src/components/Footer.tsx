@@ -90,12 +90,12 @@ export default function Footer({ className }: ComponentProps) {
 
             <div className="relative flex flex-col gap-y-[5vw] sm:gap-y-0">
               <a
-                href="mailto:Statelessraul@gmail.com"
+                href="mailto:Stateless@gmail.com"
                 className="bottom-0 flex flex-row items-center group hover:font-bold duration-100 small-text"
                 aria-label="Email Stateless"
               >
                 <div className="hidden md:block absolute w-[1.5vw] h-[1.5vw] md:w-[0.5vw] md:h-[0.5vw] bg-white -ml-4 duration-100 transform scale-x-0 group-hover:scale-x-100 origin-right"></div>
-                Statelessraul@gamil.com
+                Stateless@gmail.com
               </a>
 
               {/* Social Media SVGs */}
@@ -105,7 +105,7 @@ export default function Footer({ className }: ComponentProps) {
                   <li>
                     <a
                       className="followerchangetest"
-                      href="https://www.linkedin.com/in/Stateless-raul-265a28171/"
+                      href="https://www.linkedin.com/in/Stateless--265a28171/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit LinkedIn"
@@ -131,7 +131,7 @@ export default function Footer({ className }: ComponentProps) {
                   <li>
                     <a
                       className="followerchangetest"
-                      href="https://www.facebook.com/prince.s.raul/"
+                      href="https://www.facebook.com/prince.s./"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Visit Facebook"
