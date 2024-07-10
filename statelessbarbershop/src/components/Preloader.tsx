@@ -1,20 +1,20 @@
-// components/SuspenseFallback.tsx
+// components/Preloader.tsx
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useSplashScreen } from "@/contexts/SplashScreenContext";
+import { usePreloader } from "@/contexts/PreloaderContext";
 
-interface SuspenseFallbackProps {
+interface PreloaderProps {
   finishLoading: () => void;
   finishAnimation: () => void;
 }
 
-const SuspenseFallback: React.FC<SuspenseFallbackProps> = ({
+const Preloader: React.FC<PreloaderProps> = ({
   finishLoading,
   finishAnimation,
 }) => {
   const [loadingPercentage, setLoadingPercentage] = useState(0);
-  const { isAnimating } = useSplashScreen();
+  const { isAnimating } = usePreloader();
 
   useEffect(() => {
     const updateLoadingPercentage = (percentage: number) => {
@@ -54,6 +54,18 @@ const SuspenseFallback: React.FC<SuspenseFallbackProps> = ({
       clearInterval(interval);
     };
   }, [finishLoading]);
+
+  useEffect(() => {
+    if (isAnimating) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isAnimating]);
 
   useEffect(() => {
     if (loadingPercentage === 100) {
@@ -112,4 +124,4 @@ const SuspenseFallback: React.FC<SuspenseFallbackProps> = ({
   );
 };
 
-export default SuspenseFallback;
+export default Preloader;

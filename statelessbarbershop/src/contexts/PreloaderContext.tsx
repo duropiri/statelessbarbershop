@@ -1,25 +1,25 @@
-// contexts/SplashScreenContext.tsx
+// contexts/PreloaderContext.tsx
 "use client"
 import React, { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
-interface SplashScreenContextProps {
+interface PreloaderContextProps {
   isLoaded: boolean;
   isAnimating: boolean;
   finishLoading: () => void;
   finishAnimation: () => void;
 }
 
-const SplashScreenContext = createContext<SplashScreenContextProps | undefined>(undefined);
+const PreloaderContext = createContext<PreloaderContextProps | undefined>(undefined);
 
-export const useSplashScreen = () => {
-  const context = useContext(SplashScreenContext);
+export const usePreloader = () => {
+  const context = useContext(PreloaderContext);
   if (!context) {
-    throw new Error("useSplashScreen must be used within a SplashScreenProvider");
+    throw new Error("usePreloader must be used within a PreloaderProvider");
   }
   return context;
 };
 
-export const SplashScreenProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const PreloaderProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isAnimating, setIsAnimating] = useState(true);
 
@@ -38,7 +38,7 @@ export const SplashScreenProvider: React.FC<{ children: ReactNode }> = ({ childr
   };
 
   return (
-    <SplashScreenContext.Provider
+    <PreloaderContext.Provider
       value={{
         isLoaded,
         isAnimating,
@@ -47,6 +47,6 @@ export const SplashScreenProvider: React.FC<{ children: ReactNode }> = ({ childr
       }}
     >
       {children}
-    </SplashScreenContext.Provider>
+    </PreloaderContext.Provider>
   );
 };

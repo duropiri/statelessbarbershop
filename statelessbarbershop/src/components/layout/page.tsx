@@ -2,10 +2,10 @@
 "use client";
 import React, { ReactNode, useEffect } from "react";
 import {
-  SplashScreenProvider,
-  useSplashScreen,
-} from "@/contexts/SplashScreenContext";
-import SuspenseFallback from "@/components/SuspenseFallback";
+  PreloaderProvider,
+  usePreloader,
+} from "@/contexts/PreloaderContext";
+import Preloader from "@/components/Preloader";
 
 interface PageProps {
   children: ReactNode;
@@ -13,7 +13,7 @@ interface PageProps {
 
 const Page = ({ children }: PageProps) => {
   const { isLoaded, finishLoading, isAnimating, finishAnimation } =
-    useSplashScreen();
+    usePreloader();
 
   useEffect(() => {
     if (!isLoaded) {
@@ -22,18 +22,18 @@ const Page = ({ children }: PageProps) => {
   }, [isLoaded, finishLoading]);
 
   return (
-    <SplashScreenProvider>
+    <PreloaderProvider>
       <div className="relative flex w-full min-h-screen flex-col items-center justify-start overflow-hidden">
         {/* Splash Screen Overlay */}
         {(!isLoaded || isAnimating) && (
-          <SuspenseFallback
+          <Preloader
             finishLoading={finishLoading}
             finishAnimation={finishAnimation}
           />
         )}
         {children}
       </div>
-    </SplashScreenProvider>
+    </PreloaderProvider>
   );
 };
 
